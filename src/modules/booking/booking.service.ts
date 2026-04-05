@@ -290,6 +290,7 @@ export class BookingService {
       await session.commitTransaction();
       // Trigger billing invoice generation (external call)
       const { BillingService } = await import("../billing/billing.service");
+      // @ts-ignore
       const invoice = await BillingService.generateInvoiceForReservation(reservationId);
       return { reservation, invoice };
     } catch (error) {

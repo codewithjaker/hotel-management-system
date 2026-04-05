@@ -11,6 +11,7 @@ import billingRoutes from "../modules/billing/billing.route";
 import serviceRoutes from "../modules/service/service.route";
 import housekeepingRoutes from "../modules/housekeeping/housekeeping.route";
 import maintenanceRoutes from "../modules/maintenance/maintenance.route";
+import analyticsRoutes from "../modules/analytics/analytics.route";
 
 const router = Router();
 
@@ -26,5 +27,6 @@ router.use("/billing", billingRoutes);
 router.use("/services", serviceRoutes);
 router.use("/housekeeping", housekeepingRoutes);
 router.use("/maintenance", maintenanceRoutes);
+router.use("/analytics", analyticsRoutes);
 
 export default router;

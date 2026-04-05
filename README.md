@@ -349,3 +349,13 @@ hotel-management-system/
 | **POST** | `/api/maintenance/:id/assign` | Yes | admin, manager | Assign to maintenance staff, set status to `in_progress` |
 | **POST** | `/api/maintenance/:id/resolve` | Yes | admin, manager, maintenance | Mark as resolved, record cost and notes |
 | **POST** | `/api/maintenance/:id/close` | Yes | admin, manager | Close issue, revert room status to `available` if no other open issues |
+
+
+
+# Analytics & Reports RESTful APIs
+
+| Method | Endpoint | Auth Required | Roles Allowed | Description |
+| :--- | :--- | :---: | :--- | :--- |
+| **GET** | `/api/analytics/occupancy` | Yes | admin, manager | Occupancy report (daily/weekly/monthly) |
+| **GET** | `/api/analytics/revenue` | Yes | admin, manager | Revenue breakdown (room vs service, tax, discount) |
+| **GET** | `/api/analytics/dashboard` | Yes | admin, manager | Real-time KPI dashboard (ADR, RevPAR, occupancy, top services) |
