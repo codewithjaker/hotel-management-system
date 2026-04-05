@@ -1,0 +1,11 @@
+export const USER_ROLES = {
+  ADMIN: "admin",
+  MANAGER: "manager",
+  RECEPTIONIST: "receptionist",
+} as const;
+
+export const USER_STATUS = {
+  ACTIVE: "active",
+  INACTIVE: "inactive",
+  SUSPENDED: "suspended",
+} as const;

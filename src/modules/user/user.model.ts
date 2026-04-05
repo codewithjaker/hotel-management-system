@@ -48,11 +48,11 @@ userSchema.methods.comparePassword = async function (
 };
 
 // Remove passwordHash when converting to JSON
-userSchema.set("toJSON", {
-  transform: (_doc, ret) => {
-    delete ret.passwordHash;
-    return ret;
-  },
-});
+// userSchema.set("toJSON", {
+//   transform: (_doc, ret) => {
+//     delete ret.passwordHash;
+//     return ret;
+//   },
+// });
 
 export const User = model<UserDocument>("User", userSchema);

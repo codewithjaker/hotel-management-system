@@ -1,0 +1,43 @@
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 20:47:08"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 20:47:08"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 20:47:22"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 20:47:22"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/register \u001b[32m201\u001b[0m 694.590 ms - 1041\u001b[0m","timestamp":"2026-04-05 20:47:39"}
+{"level":"info","message":"\u001b[0mGET /api/users \u001b[33m403\u001b[0m 25.076 ms - 1182\u001b[0m","timestamp":"2026-04-05 20:51:15"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 20:52:08"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 20:52:08"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 414.046 ms - 1034\u001b[0m","timestamp":"2026-04-05 20:53:58"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/register \u001b[33m409\u001b[0m 25.193 ms - 394\u001b[0m","timestamp":"2026-04-05 20:55:03"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/register \u001b[32m201\u001b[0m 279.656 ms - 1066\u001b[0m","timestamp":"2026-04-05 20:55:55"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/register \u001b[33m409\u001b[0m 11.617 ms - 394\u001b[0m","timestamp":"2026-04-05 20:57:35"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/register \u001b[33m409\u001b[0m 11.732 ms - 394\u001b[0m","timestamp":"2026-04-05 20:57:39"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/register \u001b[33m409\u001b[0m 8.003 ms - 394\u001b[0m","timestamp":"2026-04-05 21:01:04"}
+{"level":"warn","message":"MongoDB disconnected, attempting to reconnect...","timestamp":"2026-04-05 21:01:20"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:01:29"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:01:29"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/register \u001b[33m409\u001b[0m 62.846 ms - 394\u001b[0m","timestamp":"2026-04-05 21:01:44"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 360.367 ms - 1075\u001b[0m","timestamp":"2026-04-05 21:02:48"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 275.022 ms - 1075\u001b[0m","timestamp":"2026-04-05 21:02:57"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 292.126 ms - 1075\u001b[0m","timestamp":"2026-04-05 21:03:01"}
+{"level":"info","message":"\u001b[0mGET /api/users \u001b[33m403\u001b[0m 17.705 ms - 1182\u001b[0m","timestamp":"2026-04-05 21:03:07"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:03:30"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:03:30"}
+{"level":"info","message":"\u001b[0mGET /api/users \u001b[33m403\u001b[0m 35.597 ms - 1182\u001b[0m","timestamp":"2026-04-05 21:03:38"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/register \u001b[33m409\u001b[0m 55.461 ms - 394\u001b[0m","timestamp":"2026-04-05 21:03:51"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:09:35"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:09:35"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/register \u001b[32m201\u001b[0m 574.978 ms - 1041\u001b[0m","timestamp":"2026-04-05 21:10:39"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 387.480 ms - 1007\u001b[0m","timestamp":"2026-04-05 21:11:44"}
+{"level":"info","message":"\u001b[0mGET /api/users \u001b[32m200\u001b[0m 482.213 ms - 386\u001b[0m","timestamp":"2026-04-05 21:12:11"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:18:47"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:18:47"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:18:58"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:18:58"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:19:22"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:19:23"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:19:54"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:19:54"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:20:25"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:20:25"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:21:07"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:21:07"}

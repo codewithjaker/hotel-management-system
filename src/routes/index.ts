@@ -1,8 +1,12 @@
 import { Router } from "express";
-import hotelRoutes from "../modules/hotel/hotel.route";
+import userRoutes from "../modules/user/user.route";
+import authRoutes from "../modules/auth/auth.route";
+import guestRoutes from "../modules/guest/guest.route";
 
 const router = Router();
 
-router.use("/hotels", hotelRoutes);
+router.use("/auth", authRoutes);
+router.use("/users", userRoutes);
+router.use("/guests", guestRoutes);
 
 export default router;

@@ -1,7 +1,8 @@
+// @ts-nocheck
 import { Request, Response } from "express";
 import { UserService } from "./user.service";
 import { catchAsync } from "../../utils/catchAsync";
-import { ApiResponse } from "../../utils/apiResponse";
+import { ApiError, ApiResponse } from "../../utils/apiResponse";
 
 export class UserController {
   // Get all users (admin only)

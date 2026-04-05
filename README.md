@@ -177,3 +177,15 @@ hotel-management-system/
 └── README.md
 ```
 
+
+
+# Guest Management API Documentation
+
+| Method | Endpoint | Auth Required | Roles Allowed | Description |
+| :--- | :--- | :---: | :--- | :--- |
+| **POST** | `/api/guests` | Yes | admin, manager, receptionist | Create a new guest |
+| **GET** | `/api/guests` | Yes | admin, manager, receptionist | List guests (paginated, filterable) |
+| **GET** | `/api/guests/:id` | Yes | admin, manager, receptionist | Get guest by ID |
+| **GET** | `/api/guests/:id/bookings` | Yes | admin, manager, receptionist | Get guest with booking history |
+| **PATCH** | `/api/guests/:id` | Yes | admin, manager, receptionist | Update guest details |
+| **DELETE** | `/api/guests/:id` | Yes | **admin only** | Delete guest |
