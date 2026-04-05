@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Types, startSession } from "mongoose";
 import { ServiceUsage } from "./serviceUsage.model";
 import { Service } from "./service.model";

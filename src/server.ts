@@ -26,6 +26,8 @@ import { errorMiddleware } from "./middlewares/error.middleware";
 import { connectDB } from "./config/db";
 import logger from "./config/logger";
 import { env } from "./config/env";
+import { getRedisClient } from "./config/redis";
+// import { emailQueue, bookingCleanupQueue, pricingSyncQueue } from "./jobs/queue";
 
 const PORT = env.PORT || 5000;
 const app = express();
@@ -54,6 +56,8 @@ app.use(errorMiddleware);
 // Start server only after DB connection
 const startServer = async () => {
   try {
+    // Connect to Redis
+    getRedisClient();
     await connectDB();
     app.listen(PORT, () => {
       logger.info(`🚀 Server running on port ${PORT} in ${env.NODE_ENV} mode`);

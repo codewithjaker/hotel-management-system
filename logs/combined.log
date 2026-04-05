@@ -105,3 +105,9 @@
 {"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 22:12:24"}
 {"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 22:12:43"}
 {"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 22:12:43"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 23:05:27"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 23:05:27"}
+{"level":"warn","message":"MongoDB disconnected, attempting to reconnect...","timestamp":"2026-04-05 23:05:30"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 23:24:32"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 23:24:32"}
+{"level":"warn","message":"MongoDB disconnected, attempting to reconnect...","timestamp":"2026-04-05 23:26:46"}

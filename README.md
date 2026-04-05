@@ -168,6 +168,7 @@ hotel-management-system/
 │   ├── Dockerfile
 │   └── docker-compose.yml
 │
+├── .dockerignore
 ├── .env
 ├── .env.example
 ├── .gitignore
