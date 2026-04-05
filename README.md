@@ -178,8 +178,22 @@ hotel-management-system/
 ```
 
 
+# User & Authentication RESTful APIs
 
-# Guest Management API Documentation
+| Method | Endpoint | Auth Required | Roles Allowed | Description |
+| :--- | :--- | :---: | :--- | :--- |
+| **POST** | `/api/auth/login` | No | - | Login, returns tokens |
+| **POST** | `/api/auth/refresh` | No | - | Get new access token |
+| **POST** | `/api/auth/logout` | Yes | any | Logout (no-op in JWT) |
+| **GET** | `/api/users` | Yes | admin, manager | List users with pagination |
+| **GET** | `/api/users/:id` | Yes | admin, manager, self | Get user by ID |
+| **POST** | `/api/users` | Yes | admin, manager | Create new user |
+| **PATCH** | `/api/users/:id` | Yes | admin, manager, self | Update user |
+| **DELETE** | `/api/users/:id` | Yes | admin | Delete user |
+| **POST** | `/api/users/change-password` | Yes | any (self) | Change own password |
+
+
+# Guest RESTful APIs
 
 | Method | Endpoint | Auth Required | Roles Allowed | Description |
 | :--- | :--- | :---: | :--- | :--- |
@@ -189,3 +203,41 @@ hotel-management-system/
 | **GET** | `/api/guests/:id/bookings` | Yes | admin, manager, receptionist | Get guest with booking history |
 | **PATCH** | `/api/guests/:id` | Yes | admin, manager, receptionist | Update guest details |
 | **DELETE** | `/api/guests/:id` | Yes | **admin only** | Delete guest |
+
+
+
+# Hotel RESTful APIs
+
+| Method | Endpoint | Auth Required | Roles Allowed | Description |
+| :--- | :--- | :---: | :--- | :--- |
+| **POST** | `/api/hotels` | Yes | admin only | Create a new hotel |
+| **GET** | `/api/hotels` | Yes | admin, manager, receptionist | List hotels (paginated, filterable) |
+| **GET** | `/api/hotels/:id` | Yes | admin, manager, receptionist | Get hotel by ID |
+| **PATCH** | `/api/hotels/:id` | Yes | admin only | Update hotel details |
+| **DELETE** | `/api/hotels/:id` | Yes | admin only | Delete hotel (checks dependencies) |
+
+
+
+## Room Types RESTful APIs
+
+| Method | Endpoint | Auth Required | Roles Allowed | Description |
+| :--- | :--- | :---: | :--- | :--- |
+| **POST** | `/api/room-types` | Yes | admin, manager | Create room type |
+| **GET** | `/api/room-types` | Yes | admin, manager, receptionist | List room types |
+| **GET** | `/api/room-types/:id` | Yes | admin, manager, receptionist | Get room type by ID |
+| **PATCH** | `/api/room-types/:id` | Yes | admin, manager | Update room type |
+| **DELETE** | `/api/room-types/:id` | Yes | admin only | Delete room type |
+
+---
+
+## Rooms RESTful APIs
+
+| Method | Endpoint | Auth Required | Roles Allowed | Description |
+| :--- | :--- | :---: | :--- | :--- |
+| **POST** | `/api/rooms` | Yes | admin, manager | Create room |
+| **GET** | `/api/rooms` | Yes | admin, manager, receptionist | List rooms (filterable) |
+| **GET** | `/api/rooms/:id` | Yes | admin, manager, receptionist | Get room by ID |
+| **PATCH** | `/api/rooms/:id` | Yes | admin, manager | Update room details |
+| **DELETE** | `/api/rooms/:id` | Yes | admin only | Delete room (checks constraints) |
+| **PATCH** | `/api/rooms/:id/status` | Yes | admin, manager, receptionist | Update room status (available, occupied, maintenance, cleaning) |
+| **PATCH** | `/api/rooms/:id/housekeeping` | Yes | admin, manager, housekeeping | Update housekeeping status |

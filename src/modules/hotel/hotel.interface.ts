@@ -8,7 +8,18 @@ export interface IHotel {
   phone?: string;
   address?: string;
   city?: string;
+  state?: string;
   country?: string;
-  timezone?: string;
-  status?: "active" | "inactive";
+  postalCode?: string;
+  timezone: string;
+  currency: string;
+  taxRate: number;
+  website?: string;
+  checkInTime: string;    // e.g., "14:00"
+  checkOutTime: string;   // e.g., "11:00"
+  status: "active" | "inactive";
+  createdAt?: Date;
+  updatedAt?: Date;
 }
+
+export type HotelDocument = IHotel & Document;

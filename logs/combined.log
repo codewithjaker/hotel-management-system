@@ -41,3 +41,47 @@
 {"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:20:25"}
 {"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:21:07"}
 {"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:21:07"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:22:27"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:22:27"}
+{"level":"info","message":"\u001b[0mGET /api/guests \u001b[32m200\u001b[0m 108.503 ms - 69\u001b[0m","timestamp":"2026-04-05 21:23:10"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:30:02"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:30:02"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:30:21"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:30:21"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:30:39"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:30:39"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:30:59"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:30:59"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:31:27"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:31:27"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:31:42"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:31:42"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:32:06"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:32:06"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:32:43"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:32:43"}
+{"level":"info","message":"\u001b[0mGET /api/hotels \u001b[33m401\u001b[0m 13.386 ms - 1165\u001b[0m","timestamp":"2026-04-05 21:44:10"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 344.166 ms - 1048\u001b[0m","timestamp":"2026-04-05 21:44:24"}
+{"level":"info","message":"\u001b[0mGET /api/hotels \u001b[32m200\u001b[0m 65.275 ms - 69\u001b[0m","timestamp":"2026-04-05 21:44:43"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:46:35"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:46:35"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:46:57"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:46:57"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:47:18"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:47:18"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:47:37"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:47:37"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:48:03"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:48:03"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:48:44"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:48:44"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:49:26"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:49:26"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:49:41"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:49:41"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:50:03"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:50:03"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:50:22"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:50:22"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2026-04-05 21:51:13"}
+{"level":"info","message":"🚀 Server running on port 5000 in development mode","timestamp":"2026-04-05 21:51:13"}
