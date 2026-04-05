@@ -241,3 +241,111 @@ hotel-management-system/
 | **DELETE** | `/api/rooms/:id` | Yes | admin only | Delete room (checks constraints) |
 | **PATCH** | `/api/rooms/:id/status` | Yes | admin, manager, receptionist | Update room status (available, occupied, maintenance, cleaning) |
 | **PATCH** | `/api/rooms/:id/housekeeping` | Yes | admin, manager, housekeeping | Update housekeeping status |
+
+
+# Reservations RESTful APIs
+
+| Method | Endpoint | Auth Required | Roles Allowed | Description |
+| :--- | :--- | :---: | :--- | :--- |
+| **POST** | `/api/reservations` | Yes | admin, manager, receptionist | Create reservation (with overlap check) |
+| **GET** | `/api/reservations` | Yes | admin, manager, receptionist | List reservations (filterable) |
+| **GET** | `/api/reservations/:id` | Yes | admin, manager, receptionist | Get reservation details |
+| **PATCH** | `/api/reservations/:id` | Yes | admin, manager | Update reservation (dates/rooms) |
+| **DELETE** | `/api/reservations/:id` | Yes | admin only | Delete (only cancelled/no-show) |
+| **POST** | `/api/reservations/:id/cancel` | Yes | admin, manager, receptionist | Cancel reservation |
+| **POST** | `/api/reservations/:id/check-in` | Yes | admin, manager, receptionist | Check-in (creates Stay) |
+| **POST** | `/api/reservations/:id/check-out` | Yes | admin, manager, receptionist | Check-out (closes Stay, triggers invoice) |
+
+
+# Rates & Inventory RESTful APIs
+
+| Method | Endpoint | Auth Required | Roles Allowed | Description |
+| :--- | :--- | :---: | :--- | :--- |
+| **POST** | `/api/rates` | Yes | admin, manager | Create a single rate for a specific date |
+| **POST** | `/api/rates/bulk` | Yes | admin, manager | Bulk create rates for a date range |
+| **GET** | `/api/rates` | Yes | admin, manager, receptionist | List rates (filter by hotel, room type, date range) |
+| **GET** | `/api/rates/:id` | Yes | admin, manager, receptionist | Get rate by ID |
+| **PATCH** | `/api/rates/:id` | Yes | admin, manager | Update price, inventory, or active status |
+| **DELETE** | `/api/rates/:id` | Yes | admin only | Delete a rate |
+
+
+# Billing & Payments API Documentation
+
+## Invoices RESTful APIs
+
+| Method | Endpoint | Auth Required | Roles Allowed | Description |
+| :--- | :--- | :---: | :--- | :--- |
+| **POST** | `/api/billing/invoices/generate/:reservationId` | Yes | admin, manager, receptionist | Generate invoice from reservation |
+| **GET** | `/api/billing/invoices` | Yes | admin, manager, receptionist | List invoices (filterable) |
+| **GET** | `/api/billing/invoices/:id` | Yes | admin, manager, receptionist | Get invoice with payments |
+| **PATCH** | `/api/billing/invoices/:id` | Yes | admin, manager | Update invoice (due date, notes) |
+| **POST** | `/api/billing/invoices/:id/cancel` | Yes | admin, manager | Cancel invoice |
+| **DELETE** | `/api/billing/invoices/:id` | Yes | admin only | Delete invoice (if not paid) |
+
+---
+
+## Payments RESTful APIs
+
+| Method | Endpoint | Auth Required | Roles Allowed | Description |
+| :--- | :--- | :---: | :--- | :--- |
+| **POST** | `/api/billing/payments` | Yes | admin, manager, receptionist | Record a payment against invoice |
+| **GET** | `/api/billing/payments` | Yes | admin, manager, receptionist | List payments (filterable) |
+| **GET** | `/api/billing/payments/:id` | Yes | admin, manager, receptionist | Get payment details |
+| **PATCH** | `/api/billing/payments/:id` | Yes | admin, manager | Update payment (status, ref) |
+| **DELETE** | `/api/billing/payments/:id` | Yes | admin only | Delete payment |
+
+
+# Services & Service Usages API Documentation
+
+## Services RESTful APIs
+
+| Method | Endpoint | Auth Required | Roles Allowed | Description |
+| :--- | :--- | :---: | :--- | :--- |
+| **POST** | `/api/services` | Yes | admin, manager | Create a service |
+| **GET** | `/api/services` | Yes | admin, manager, receptionist | List services (filter by hotel, category) |
+| **GET** | `/api/services/:id` | Yes | admin, manager, receptionist | Get service by ID |
+| **PATCH** | `/api/services/:id` | Yes | admin, manager | Update service details |
+| **DELETE** | `/api/services/:id` | Yes | admin only | Delete service (if no usage exists) |
+
+---
+
+## Service Usages RESTful APIs
+
+| Method | Endpoint | Auth Required | Roles Allowed | Description |
+| :--- | :--- | :---: | :--- | :--- |
+| **POST** | `/api/services/usages` | Yes | admin, manager, receptionist | Add a service charge to a stay |
+| **GET** | `/api/services/usages` | Yes | admin, manager, receptionist | List all service usages (paginated) |
+| **GET** | `/api/services/usages/by-stay/:stayId` | Yes | admin, manager, receptionist | Get all usages for a specific stay |
+| **GET** | `/api/services/usages/:id` | Yes | admin, manager, receptionist | Get a single usage by ID |
+| **PATCH** | `/api/services/usages/:id` | Yes | admin, manager | Update quantity or usedAt |
+| **DELETE** | `/api/services/usages/:id` | Yes | admin, manager | Delete a service usage |
+
+
+
+# Housekeeping RESTful APIs
+
+| Method | Endpoint | Auth Required | Roles Allowed | Description |
+| :--- | :--- | :---: | :--- | :--- |
+| **POST** | `/api/housekeeping` | Yes | admin, manager | Create a new cleaning task |
+| **GET** | `/api/housekeeping` | Yes | admin, manager, housekeeping, receptionist | List tasks (filter by status, priority, room) |
+| **GET** | `/api/housekeeping/:id` | Yes | admin, manager, housekeeping, receptionist | Get task details |
+| **PATCH** | `/api/housekeeping/:id` | Yes | admin, manager | Update task (assign, reschedule, notes) |
+| **DELETE** | `/api/housekeeping/:id` | Yes | admin only | Delete a task |
+| **POST** | `/api/housekeeping/:id/start` | Yes | admin, manager, housekeeping | Mark task as in progress, set startedAt |
+| **POST** | `/api/housekeeping/:id/complete` | Yes | admin, manager, housekeeping | Complete task, update room housekeepingStatus |
+| **POST** | `/api/housekeeping/:id/inspect` | Yes | admin, manager | Inspect completed task (pass/fail) |
+
+
+
+# Maintenance RESTful APIs
+
+| Method | Endpoint | Auth Required | Roles Allowed | Description |
+| :--- | :--- | :---: | :--- | :--- |
+| **POST** | `/api/maintenance` | Yes | admin, manager, receptionist | Report a maintenance issue (sets room to maintenance) |
+| **GET** | `/api/maintenance` | Yes | admin, manager, maintenance, receptionist | List issues (filter by status, priority, type) |
+| **GET** | `/api/maintenance/:id` | Yes | admin, manager, maintenance, receptionist | Get issue details |
+| **PATCH** | `/api/maintenance/:id` | Yes | admin, manager | Update issue (description, priority, notes) |
+| **DELETE** | `/api/maintenance/:id` | Yes | admin only | Delete an issue (handles room status cleanup) |
+| **POST** | `/api/maintenance/:id/assign` | Yes | admin, manager | Assign to maintenance staff, set status to `in_progress` |
+| **POST** | `/api/maintenance/:id/resolve` | Yes | admin, manager, maintenance | Mark as resolved, record cost and notes |
+| **POST** | `/api/maintenance/:id/close` | Yes | admin, manager | Close issue, revert room status to `available` if no other open issues |
