@@ -1,14 +1,74 @@
-// models/serviceUsage.model.ts
+// src/modules/service/serviceUsage.model.ts
+
 import { Schema, model, Types } from "mongoose";
 
-const serviceUsageSchema = new Schema(
+export interface IServiceUsage {
+  hotelId: Types.ObjectId;
+  stayId: Types.ObjectId;
+  serviceId: Types.ObjectId;
+
+  quantity: number;
+  unitPrice: number;
+  totalPrice: number;
+
+  usedAt?: Date;
+  createdAt?: Date;
+}
+
+const serviceUsageSchema = new Schema<IServiceUsage>(
   {
-    stayId: { type: Types.ObjectId, ref: "Stay" },
-    serviceId: { type: Types.ObjectId, ref: "Service" },
-    quantity: Number,
-    totalPrice: Number,
+    hotelId: {
+      type: Types.ObjectId,
+      ref: "Hotel",
+      required: true,
+      index: true,
+    },
+
+    stayId: {
+      type: Types.ObjectId,
+      ref: "Stay",
+      required: true,
+      index: true,
+    },
+
+    serviceId: {
+      type: Types.ObjectId,
+      ref: "Service",
+      required: true,
+    },
+
+    quantity: {
+      type: Number,
+      default: 1,
+      min: 1,
+    },
+
+    unitPrice: {
+      type: Number,
+      required: true,
+    },
+
+    totalPrice: {
+      type: Number,
+      required: true,
+    },
+
+    usedAt: {
+      type: Date,
+      default: Date.now,
+      index: true,
+    },
   },
   { timestamps: true }
 );
 
-export const ServiceUsage = model("ServiceUsage", serviceUsageSchema);
+// 🔥 Auto calculate total price
+serviceUsageSchema.pre("save", function (next) {
+  this.totalPrice = this.quantity * this.unitPrice;
+  next();
+});
+
+export const ServiceUsage = model<IServiceUsage>(
+  "ServiceUsage",
+  serviceUsageSchema
+);
